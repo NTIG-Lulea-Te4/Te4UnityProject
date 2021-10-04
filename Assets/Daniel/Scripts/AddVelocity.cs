@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Daniel : MonoBehaviour
+public class AddVelocity : MonoBehaviour
 {
+    [SerializeField]
+    Vector3 v3Force;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -11,8 +15,10 @@ public class Daniel : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        GetComponent<Rigidbody>().velocity += v3Force;
     }
+
+    
 }
