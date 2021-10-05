@@ -31,6 +31,7 @@ public class MånsScriptPlatform : MonoBehaviour
             Debug.Log("W was pressed");
             transform.Rotate(new Vector3(0, 0, -1) * mySpeed * Time.deltaTime);
 
+
         }
         
         if (Input.GetKey(KeyCode.S))
