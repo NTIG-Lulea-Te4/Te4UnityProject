@@ -7,41 +7,45 @@ public class MånsScriptPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Vector3 myPosition = GameObject.Find("Platform").transform.position;
-        float mySpeed = 5;
-        float myStationary = 0;
+       
         
     }
 
     // Update is called once per frame
-    void Update(Vector3 myPos, float speed, float stay)
+    void Update()
     {
         
-        
+        float mySpeed = 140;
+        float myStationary = 0;
+
         if (Input.GetKey(KeyCode.A))
         {
-            myPos = myPos;        
+            Debug.Log("A was pressed");
+            transform.Rotate(new Vector3(1, 0, 0) * mySpeed * Time.deltaTime);
 
         }
 
         if (Input.GetKey(KeyCode.W))
         {
 
-
+            Debug.Log("W was pressed");
+            transform.Rotate(new Vector3(0, 0, -1) * mySpeed * Time.deltaTime);
 
         }
         
         if (Input.GetKey(KeyCode.S))
         {
 
-
+            Debug.Log("S was pressed");
+            transform.Rotate(new Vector3(0, 0, 1) * mySpeed * Time.deltaTime);
 
         }
         
         if (Input.GetKey(KeyCode.D))
         {
 
-
+            Debug.Log("D was pressed");
+            transform.Rotate(new Vector3(-1, 0, 0) * mySpeed * Time.deltaTime);
 
         }
     
