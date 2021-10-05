@@ -40,7 +40,7 @@ public class PlaneRotation : MonoBehaviour
         if (Input.GetKey(keyPositionLeft))
         {
 
-            transform.Rotate(Vector3.forward * -speed * Time.deltaTime);
+            transform.Rotate(Vector3.left * -speed * Time.deltaTime);
         }
     }
 }
