@@ -11,8 +11,8 @@ public class MovingPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rotationValueZAxis = 20;
-        rotationValueXAxis = 20;
+        rotationValueZAxis = 40;
+        rotationValueXAxis = 40;
     }
 
     // Update is called once per frame
