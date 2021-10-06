@@ -13,8 +13,6 @@ public class BallScript : MonoBehaviour
         rigidbody = gameObject.AddComponent<Rigidbody>();
         rigidbody.mass = 0.01f;
         Physics.gravity = new Vector3(0, -2.0f, 0);
-        sleeping = false;
-        fallTime = 0.0f;
 
     }
 
@@ -23,7 +21,7 @@ public class BallScript : MonoBehaviour
     {
 
 
-        if ( rigidbody.IsSleeping())
+        if (rigidbody.IsSleeping())
         {
 
             rigidbody.WakeUp();
