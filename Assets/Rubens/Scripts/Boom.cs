@@ -43,7 +43,7 @@ public class Boom : MonoBehaviour
                 }
 
             }
-            explotionEffect.SetActive(false);
+            
             Destroy(gameObject);
         }
 
