@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class Destroying : MonoBehaviour
 {
-    public static int theScore;
+    public static float theScore;
     public GameObject ScoreText;
+    public float radius;
+    public float force = 500f;
 
     void OnCollisionEnter(Collision collision)
     {
@@ -15,6 +17,21 @@ public class Destroying : MonoBehaviour
             theScore += 1;
             Destroy(collision.gameObject);
         }
+        
+        /*if (collision.gameObject.tag.Equals("theBomb"))
+        {
+            Destroy(collision.gameObject);
+
+            Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+            foreach (Collider nearbyObject in colliders)
+            {
+                Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
+                if (rb != null)
+                {
+                    rb.AddExplosionForce(force, transform.position, radius);
+                }
+            }
+        }*/
     }
     void Update()
     {

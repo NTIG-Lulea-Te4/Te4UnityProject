@@ -8,6 +8,7 @@ TagManager:
   - New tag (1)
   - object
   - target
+  - theBomb
   layers:
   - Default
   - TransparentFX
