@@ -15,6 +15,6 @@ public class BallSolution : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rigidbody.AddForce(Vector3.up * speed);
+        rigidbody.AddForce(new Vector3(0,1,0) * speed);
     }
 }

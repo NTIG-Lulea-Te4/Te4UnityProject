@@ -8,6 +8,7 @@ public class GrenadeExplode : MonoBehaviour
     public float delay = 3f;
     public float blastRadius = 5f;
     public float force = 50f;
+    
 
     float countDown;
     bool hasExploded = false;
@@ -15,6 +16,7 @@ public class GrenadeExplode : MonoBehaviour
     void Start()
     {
         countDown = delay;
+        
     }
 
     // Update is called once per frame
@@ -42,5 +44,6 @@ public class GrenadeExplode : MonoBehaviour
         }
 
         Destroy(gameObject);
+        
     }
 }

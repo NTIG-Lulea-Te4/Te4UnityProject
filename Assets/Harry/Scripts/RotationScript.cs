@@ -8,10 +8,10 @@ public class RotationScript : MonoBehaviour
     Quaternion startPosistion;
     float speed = 5;
     float xAcel;
-    float yAcel;
+    
     float zAcel;
     float rotationX;
-    float rotationY;
+    
     float rotationZ;
 
     // Start is called before the first frame update
@@ -19,7 +19,6 @@ public class RotationScript : MonoBehaviour
     {
         startPosistion = transform.rotation;
 
-        yAcel = 5;
         xAcel = 0.04f;
         zAcel = 4;
 
@@ -28,10 +27,6 @@ public class RotationScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        rotationY = transform.rotation.y;
-        
-
 
         //if (Input.GetKey(KeyCode.Space))
         //{
@@ -43,8 +38,9 @@ public class RotationScript : MonoBehaviour
             rotationZ = transform.rotation.z;
             if (rotationZ > -20)
             {
+
                 transform.Rotate(0, 0, -zAcel * speed * Time.deltaTime);
-                Debug.Log("W was pressed");
+                
             }
 
         }

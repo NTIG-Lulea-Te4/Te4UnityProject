@@ -523,6 +523,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee4565ec8015d34bb96cf8e11120c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &580509398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 580509399}
+  m_Layer: 0
+  m_Name: GrenadeShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &580509399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580509398}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.14199924, y: 0.13800001, z: 0.77400017}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 1197449555}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &586285029
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,6 +1259,11 @@ Halo:
     serializedVersion: 2
     rgba: 4294901921
   m_Size: 0.5
+--- !u!4 &1197449555 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8450798665855684223, guid: 5c101f710ed917946a9b723a04669556, type: 3}
+  m_PrefabInstance: {fileID: 8450798664836968237}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1197449556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1253,6 +1288,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f853048d8eb8e443b1a389e46a15cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1197449558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197449549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb2908ea3113344bacc3136ea35231a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FirePoint: {fileID: 580509399}
+  bulletPrefab: {fileID: 1659235979624631239, guid: 9b73102ede1ccbd4491d5d84ad22569f, type: 3}
+  ass: {fileID: 8013082495382586141, guid: 9b73102ede1ccbd4491d5d84ad22569f, type: 3}
 --- !u!1 &1528783536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,7 +1528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 3
   blastRadius: 5
-  force: 5000
+  force: 50
 --- !u!1 &1650754796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,6 +1631,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 491298733}
     m_Modifications:
+    - target: {fileID: 4200524380593890582, guid: 3e59d27f90ed1aa43829923e533d647d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5842688714517154025, guid: 3e59d27f90ed1aa43829923e533d647d, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -1636,6 +1690,10 @@ PrefabInstance:
     - target: {fileID: 8726115063769249384, guid: 3e59d27f90ed1aa43829923e533d647d, type: 3}
       propertyPath: m_Name
       value: DangerousHolesThatWillHuntAndKillYourFamily
+      objectReference: {fileID: 0}
+    - target: {fileID: 8726115063769249384, guid: 3e59d27f90ed1aa43829923e533d647d, type: 3}
+      propertyPath: m_TagString
+      value: DangerHole
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e59d27f90ed1aa43829923e533d647d, type: 3}
@@ -2703,15 +2761,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5725589975843601589, guid: 9b73102ede1ccbd4491d5d84ad22569f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.249
+      value: 0.19
       objectReference: {fileID: 0}
     - target: {fileID: 5725589975843601589, guid: 9b73102ede1ccbd4491d5d84ad22569f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.878
+      value: -3.45
       objectReference: {fileID: 0}
     - target: {fileID: 5725589975843601589, guid: 9b73102ede1ccbd4491d5d84ad22569f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.2331636
+      value: -11.85
       objectReference: {fileID: 0}
     - target: {fileID: 5725589975843601589, guid: 9b73102ede1ccbd4491d5d84ad22569f, type: 3}
       propertyPath: m_LocalRotation.w
