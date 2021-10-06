@@ -5,9 +5,11 @@ using UnityEngine;
 public class InfoContainer : MonoBehaviour
 {
 
-    int score = 0;
-        
-    public int Score
+
+    static int score;
+
+    #region get/setters
+    static public int Score
     {
         get
         {
@@ -18,5 +20,14 @@ public class InfoContainer : MonoBehaviour
             score += value;
         }
     }
+
+
+    #endregion
+
+    private void Start()
+    {
+        score = 0;
+    }
+
 
 }

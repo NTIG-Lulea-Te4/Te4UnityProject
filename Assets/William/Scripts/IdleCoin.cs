@@ -7,6 +7,8 @@ public class IdleCoin : MonoBehaviour
 
     public float spinSpeed;
 
+
+
     void Start()
     {
 
@@ -24,6 +26,7 @@ public class IdleCoin : MonoBehaviour
     {
 
         Destroy(this.gameObject);
+        InfoContainer.Score++;
     }
 
 }
