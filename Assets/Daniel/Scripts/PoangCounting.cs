@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PoangCounting : MonoBehaviour
 {
     public static Text poangText;
-    public static int poang = 0;
+    public static int score = 0;
 
     // Start is called before the first frame update
      void Start()
@@ -18,7 +18,7 @@ public class PoangCounting : MonoBehaviour
     void Update()
     {
 
-        poangText.text = "Your Poang: " + poang;
+        poangText.text = "Your Score: " + score;
     }
 
 

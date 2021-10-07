@@ -21,6 +21,8 @@ public class AddControllKey : MonoBehaviour
     KeyCode keyNegativeZ;
     [SerializeField]
     KeyCode keyPositiveY;
+    [SerializeField]
+    KeyCode reset;
     void Start()
     {
         
@@ -48,6 +50,10 @@ public class AddControllKey : MonoBehaviour
         if (Input.GetKey(keyPositiveY))
         {
             GetComponent<Rigidbody>().velocity += v3ForceY;
+        }
+        if (Input.GetKey(reset))
+        {
+            transform.position = new Vector3(0, 1, 0);
         }
 
 

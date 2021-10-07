@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExplosionScript : MonoBehaviour
+public class RotatingTheTower : MonoBehaviour
 {
     // Start is called before the first frame update
+    public bool rotation;
+    public float rotateAmount = 1;
     void Start()
     {
         
@@ -13,6 +15,9 @@ public class ExplosionScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (rotation)
+        {
+            transform.Rotate(Vector3.up * rotateAmount);
+        }
     }
 }

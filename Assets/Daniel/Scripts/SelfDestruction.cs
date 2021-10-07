@@ -2,12 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AddVelocity : MonoBehaviour
+public class SelfDestruction : MonoBehaviour
 {
-    [SerializeField]
-    Vector3 v3Force;
-
-    
+    public GameObject gameObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +12,8 @@ public class AddVelocity : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        GetComponent<Rigidbody>().velocity += v3Force;
+        Destroy(gameObject, 2);
     }
-
-    
 }

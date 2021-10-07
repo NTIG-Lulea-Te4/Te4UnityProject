@@ -20,39 +20,45 @@ public class Destroy : MonoBehaviour
     public void OnCollisionEnter(Collision collision)
     {
         
-        if (collision.gameObject.tag.Equals("Enemy"))
+
+        if (collision.gameObject.tag.Equals("Bullet"))
         {
             GameObject explosion1 = Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(explosion1, 0.5f);
             KnockBack();
             Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag.Equals("Enemy"))
+        {
+            //GameObject explosion1 = Instantiate(explosion, transform.position, Quaternion.identity);
+            //Destroy(explosion1, 0.5f);
+            Destroy(collision.gameObject);
             Debug.Log("Hit");
-            PoangCounting.poang += 1;
+            PoangCounting.score += 1;
             StartCoroutine(CreateObjects());
- 
         }
     }
 
     //Update is called once per frame
-        IEnumerator CreateObjects()
+
+    IEnumerator CreateObjects()
     {
 
-            xPosition = Random.Range(-4, 4);
-            zPosition = Random.Range(-4, 4);
-            Instantiate(sample, new Vector3(xPosition, 20, zPosition), Quaternion.identity);
-            yield return new WaitForSeconds(1);
+        xPosition = Random.Range(-10, 10);
+        zPosition = Random.Range(-10, 10);
+        Instantiate(sample, new Vector3(xPosition, 20, zPosition), Quaternion.identity);
+        yield return new WaitForSeconds(1);
 
     }
-
     void KnockBack()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach (Collider i in colliders)
         {
-            Rigidbody r = i.GetComponent<Rigidbody>();
-            if(r != null)
+            Rigidbody rigidbody = i.GetComponent<Rigidbody>();
+            if(rigidbody != null)
             {
-                r.AddExplosionForce(expForce, transform.position, radius);
+                rigidbody.AddExplosionForce(expForce, transform.position, radius);
             }
         }
     }
