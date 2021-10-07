@@ -9,6 +9,7 @@ TagManager:
   - object
   - target
   - theBomb
+  - bullet
   layers:
   - Default
   - TransparentFX

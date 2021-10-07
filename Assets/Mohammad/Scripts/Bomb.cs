@@ -23,7 +23,7 @@ public class Bomb : MonoBehaviour
     // Update is called once per frame
     void Explode ()
     {
-        Instantiate(explotion, transform.position, transform.rotation);
+        Instantiate (explotion,new Vector3( transform.position.x, transform.position.y + 4, transform.position.z), transform.rotation);
         
     }
 
