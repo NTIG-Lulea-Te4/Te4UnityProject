@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Boom : MonoBehaviour
 {
-    public float delay = 3f;
+    public float delay = 2f;
     float countdown;
     bool hasExploded = false;
     public GameObject explotionEffect;
     public float blastRadius = 5f;
-    public float force = 700f;
+    public float force = 7000f;
 
     // Start is called before the first frame update
     void Start()

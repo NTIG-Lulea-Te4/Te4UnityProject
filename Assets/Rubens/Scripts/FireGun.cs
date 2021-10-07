@@ -2,10 +2,8 @@ using UnityEngine;
 
 public class FireGun : MonoBehaviour
 {
-    public float damage = 10f;
-    public float range = 100f;
-
-    public Camera fpsCam;
+    public Transform spawnpoint;
+    public GameObject prefab;
 
     //public GameObject bomb;
     //public Transform shotPoint;
@@ -20,13 +18,11 @@ public class FireGun : MonoBehaviour
     }
     void Shoot()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
-        {
 
-            Debug.Log("hi");
-            //GameObject CreateBomb = Instantiate(bomb, shotPoint.position, shotPoint.rotation);
-            //CreateBomb.GetComponent<Rigidbody>().velocity = shotPoint.transform.up * damage;
-        }
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = 40;
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+
+        Instantiate(prefab, worldPosition, Quaternion.identity);
     }
 }
