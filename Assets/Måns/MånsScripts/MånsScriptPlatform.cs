@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class MånsScriptPlatform : MonoBehaviour
 {
+        Quaternion startPosistion;
     // Start is called before the first frame update
     void Start()
     {
        
+        startPosistion = transform.rotation;
         
     }
 
@@ -16,7 +18,8 @@ public class MånsScriptPlatform : MonoBehaviour
     {
         
         float mySpeed = 140;
-        float myStationary = 0;
+
+        transform.rotation = Quaternion.Lerp(transform.rotation, startPosistion, Time.deltaTime * mySpeed / 10);
 
         if (Input.GetKey(KeyCode.A))
         {

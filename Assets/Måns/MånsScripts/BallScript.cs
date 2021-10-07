@@ -11,8 +11,8 @@ public class BallScript : MonoBehaviour
     void Start()
     {
         rigidbody = gameObject.AddComponent<Rigidbody>();
-        rigidbody.mass = 0.01f;
-        Physics.gravity = new Vector3(0, -2.0f, 0);
+        rigidbody.mass = 1f;
+        Physics.gravity = new Vector3(0, -5f, 0);
 
     }
 
