@@ -8,6 +8,7 @@ TagManager:
   - TnT
   - FxTemporaire
   - Point Box
+  - Heal Box
   layers:
   - Default
   - TransparentFX

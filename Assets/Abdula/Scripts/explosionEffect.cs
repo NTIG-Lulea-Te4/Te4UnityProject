@@ -12,8 +12,8 @@ public class explosionEffect : MonoBehaviour
     [SerializeField]
     private float explosionForce;
 
-
-    public float radius;
+    [SerializeField]
+    private float radius;
 
     private Collider[] colliders;
 
@@ -27,8 +27,7 @@ public class explosionEffect : MonoBehaviour
             Destroy(myExplosion, 2);
             knockBack();
             Destroy(collision.gameObject);
-
-            //Destroy(collision.gameObject);
+            BallHealth.instance.DamageBall();
         }
     }
 
