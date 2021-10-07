@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Goal
   - DangerHole
+  - Coin
+  - Sphere
   layers:
   - Default
   - TransparentFX
