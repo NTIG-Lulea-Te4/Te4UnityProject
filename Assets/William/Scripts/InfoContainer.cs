@@ -17,17 +17,12 @@ public class InfoContainer : MonoBehaviour
         }
         set
         {
-            score += value;
+            score = value;
         }
     }
 
 
     #endregion
-
-    private void Start()
-    {
-        score = 0;
-    }
 
 
 }
