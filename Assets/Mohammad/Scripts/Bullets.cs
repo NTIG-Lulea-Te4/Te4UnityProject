@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Bullets : MonoBehaviour
 {
 
-    public Transform transform;
+    //public Transform transform;
     public Rigidbody bullet;
     public float speed;
     public float timer = 0;
@@ -16,7 +16,13 @@ public class Bullets : MonoBehaviour
         rb = Instantiate(bullet, transform.position, transform.rotation);
         rb.velocity = transform.TransformDirection(Vector3.forward * speed);
 
-        Destroy(rb.gameObject, 4);
+        Destroy(rb.gameObject, 2);
+
+       /* 
+        GameObject bullets = Instantiate(bullet, transform.position, transform.rotation);
+        Rigidbody rb = bullets.GetComponent<Rigidbody>();
+        rb.AddForce(Vector3.forward * speed);
+       */
     }
 
     void Update()
@@ -24,8 +30,7 @@ public class Bullets : MonoBehaviour
         timer += Time.deltaTime;
         if(timer >= 2)
         {
-        AddBullet();
-
+            AddBullet();
             timer = 0;
         }
        
@@ -33,36 +38,5 @@ public class Bullets : MonoBehaviour
 
 
 }
-    /*public float speed = 5f;
-    public GameObject Bullet;
-
-
-    void OnTriggerEnter(Collider other)
-    {
-        Destroy(gameObject);    
-    }
-
-
-
-
-        public int bulletstimmer = 20;
-        public List<Vector3> bullets;
-
-        void Update()
-        {
-            bulletstimmer--;
-            if (bulletstimmer <=0)
-            {
-                bulletstimmer = 60;
-                bullets.Add(new Vector3(20, 30, 20));
-            }
-            for (int i = 0; i < bullets.Count; i++)
-            {
-                bullets[i] = bullets[i] + new Vector3(10, 0, 0);
-            }
-        }
-
-        */
-
 
 

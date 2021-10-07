@@ -51,7 +51,7 @@ public class NewBehaviourScript : MonoBehaviour
 
          /*  void OnCollisionEnter(Collision collision)
            {
-               if (Collision..tag == "target")
+               if (Collision.tag == "target")
                {
 
                }
