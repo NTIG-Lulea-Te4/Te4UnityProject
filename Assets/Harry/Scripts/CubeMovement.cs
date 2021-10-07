@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class CubeMovement : MonoBehaviour
 {
-    float speed = 5;
-    float xAcel;
-    float zAcel;
+    public float verticalSpeed;
+    public float howManyTimesHigherJump;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        xAcel = 2;
-        zAcel = 200;
+        if (howManyTimesHigherJump <= 0)
+        {
+            howManyTimesHigherJump = 1;
+        }
     }
 
     // Update is called once per frame
@@ -20,38 +22,42 @@ public class CubeMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            
-            
-                transform.Rotate(0, 0, -zAcel * speed * Time.deltaTime);
 
-            
+
+            transform.position += new Vector3(0,0,1) * verticalSpeed * Time.deltaTime;
+
+
 
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-           
 
-                transform.Rotate(xAcel, 0, 0 * speed * Time.deltaTime);
+            transform.position += new Vector3(-1, 0, 0) * verticalSpeed * Time.deltaTime;
 
-            
+
+
         }
         if (Input.GetKey(KeyCode.S))
         {
-            
 
-                transform.Rotate(0, 0, zAcel * speed * Time.deltaTime);
 
-            
+            transform.position += new Vector3(0, 0, -1) * verticalSpeed * Time.deltaTime;
+
+
 
         }
         if (Input.GetKey(KeyCode.D))
         {
-            
 
-                transform.Rotate(-xAcel, 0, 0 * speed * Time.deltaTime);
 
-            
+            transform.position += new Vector3(1, 0, 0) * verticalSpeed * Time.deltaTime;
+
+
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            transform.position += Vector3.up * (verticalSpeed * howManyTimesHigherJump) * Time.deltaTime;
         }
     }
 }
