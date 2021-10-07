@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CoinPickUp : MonoBehaviour
 {
-    public ValueHolder coinAmount;
-    int pickedUpCoins;
+    
+    
     
     // Start is called before the first frame update
     void Start()
     {  
-        pickedUpCoins = coinAmount.CoinCounter;
+       
     }
 
     // Update is called once per frame
@@ -22,8 +22,8 @@ public class CoinPickUp : MonoBehaviour
     {
         if (other.transform.CompareTag("Sphere"))
         {
-            pickedUpCoins = coinAmount.CoinCounter + 1;
-            coinAmount.CoinCounter = pickedUpCoins;
+
+            ValueHolder.coinCounter++;
 
             Debug.Log("You got a coin");
             Destroy(gameObject);

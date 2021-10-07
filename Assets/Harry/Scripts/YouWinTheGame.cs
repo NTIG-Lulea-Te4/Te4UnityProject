@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class YouWinTheGame : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class YouWinTheGame : MonoBehaviour
         {
             Debug.Log("You win");
             Destroy(gameObject);
+            SceneManager.LoadScene("NumberTwo", LoadSceneMode.Single);
         }
         if (other.transform.CompareTag("DangerHole"))
         {

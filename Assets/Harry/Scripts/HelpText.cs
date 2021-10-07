@@ -27,7 +27,7 @@ public class HelpText : MonoBehaviour
         {
             helpText.SetActive(false);
         }
-
+        
  
     }
 

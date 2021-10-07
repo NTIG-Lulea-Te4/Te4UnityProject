@@ -5,20 +5,20 @@ using UnityEngine;
 public class ValueHolder : MonoBehaviour
 {
 
-    public int CoinCounter;
+    public static int coinCounter;
     // Start is called before the first frame update
     void Start()
     {
-        CoinCounter = 0;
+        coinCounter = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(CoinCounter == 1)
+        if(coinCounter == 1)
         {
             Debug.Log("ass");
         }
-        Debug.Log(CoinCounter);
+        Debug.Log(coinCounter);
     }
 }

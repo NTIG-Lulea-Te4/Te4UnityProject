@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Harry/Scenes/HarryScene.unity
+    guid: dc23972a2019a41458b7574286cd16c2
+  - enabled: 1
+    path: Assets/Harry/Scenes/NumberTwo.unity
+    guid: eef1b068c70f3474cb7f00a05fb0288e
   m_configObjects: {}
