@@ -26,26 +26,26 @@ public class Boom : MonoBehaviour
             Explode();
             hasExploded = true;
         }
+    }
+    void Explode()
+    {
+        Instantiate(explotionEffect, transform.position, transform.rotation);
 
-        void Explode()
+        Collider[] colliders = Physics.OverlapSphere(transform.position, blastRadius);
+
+        foreach (Collider nearbyObject in colliders)
         {
-            Instantiate(explotionEffect, transform.position, transform.rotation);
+            Rigidbody rigbod = nearbyObject.GetComponent<Rigidbody>();
 
-            Collider[] colliders = Physics.OverlapSphere(transform.position, blastRadius);
-
-            foreach (Collider nearbyObject in colliders)
+            if (rigbod != null)
             {
-                Rigidbody rigbod = nearbyObject.GetComponent<Rigidbody>();
-
-                if (rigbod != null) 
-                {
-                    rigbod.AddExplosionForce(force, transform.position, blastRadius);
-                }
-
+                rigbod.AddExplosionForce(force, transform.position, blastRadius);
             }
-            
-            Destroy(gameObject);
+
         }
 
+        Destroy(gameObject);
     }
+
 }
+
