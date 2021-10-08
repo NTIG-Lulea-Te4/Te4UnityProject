@@ -544,3 +544,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 141bff808245ae745a47a1d5c8cfa7ae, type: 3}
+--- !u!1 &1556884131223927619 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 510434466513147266, guid: 141bff808245ae745a47a1d5c8cfa7ae, type: 3}
+  m_PrefabInstance: {fileID: 1556884131223927618}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1556884131223927620 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9147029660797503745, guid: 141bff808245ae745a47a1d5c8cfa7ae, type: 3}
+  m_PrefabInstance: {fileID: 1556884131223927618}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1556884131223927621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556884131223927619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0796a1b5d73b14a936fcdef0069ebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpawn: {fileID: 1556884131223927620}
+  bullet: {fileID: 7474902450933666718, guid: 1f6d6b34ad23a4744b699728c66d4bdb, type: 3}

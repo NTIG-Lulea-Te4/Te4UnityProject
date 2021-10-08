@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/William/Scenes/WilliamScene.unity
+    guid: 3c47a023951391c49a818bee2a358414
+  - enabled: 1
+    path: Assets/William/Scenes/SecondaryScene.unity
+    guid: 1314abed6a64751479d44860cd81f3b1
   m_configObjects: {}

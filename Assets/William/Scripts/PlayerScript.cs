@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
 
-    Rigidbody rigidbody;
+    Rigidbody playerRigidbody;
     Vector3 vectorX;
     Vector3 vectorY;
     Vector2 playerPositionOnScreen;
@@ -15,7 +15,7 @@ public class PlayerScript : MonoBehaviour
 
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        playerRigidbody = GetComponent<Rigidbody>();
         vectorX = new Vector3(5, 0, 0);
         vectorY = new Vector3(0, 0, 5);
 
@@ -32,29 +32,29 @@ public class PlayerScript : MonoBehaviour
 
         angle = AngleBetweenTwoPoints(playerPositionOnScreen, mouseCursorPosistionOnScreen);
 
-        transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
+        transform.Rotate(new Vector3(0, angle, 0));
 
         if (Input.GetKey(KeyCode.W))
         {
-            rigidbody.AddForce(vectorX * -1);
+            playerRigidbody.AddForce(vectorX * -1);
 
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            rigidbody.AddForce(vectorX);
+            playerRigidbody.AddForce(vectorX);
 
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            rigidbody.AddForce(vectorY * -1);
+            playerRigidbody.AddForce(vectorY * -1);
 
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            rigidbody.AddForce(vectorY);
+            playerRigidbody.AddForce(vectorY);
 
         }
 
@@ -62,7 +62,7 @@ public class PlayerScript : MonoBehaviour
         //Läskig matte som räknar vinklar
         float AngleBetweenTwoPoints(Vector3 playerPosistion, Vector3 mousePosition)
         {
-            return Mathf.Atan2(playerPosistion.y - mousePosition.y, playerPosistion.x - mousePosition.x) * Mathf.Rad2Deg;
+            return Mathf.Atan2(mousePosition.x - playerPosistion.x, mousePosition.z - playerPosistion.z) * Mathf.Rad2Deg;
 
         }
 
