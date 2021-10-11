@@ -5,15 +5,15 @@ using UnityEngine;
 public class TextureTextHitScript : MonoBehaviour
 {
 
-    Material material;
     public float duration = 60.0f;
+    Material material;
 
     
     // Start is called before the first frame update
     void Start()
     {
         material = GetComponent<Renderer>().material;
-        print("Materials " + Resources.FindObjectsOfTypeAll(typeof(Material)).Length);
+        //print("Materials " + Resources.FindObjectsOfTypeAll(typeof(Material)).Length);
         
     }
 
