@@ -6,13 +6,16 @@ public class BallHealth : MonoBehaviour
 {
     public static BallHealth instance;
 
-    public GameOverScreen gameOverScreen;
+    //public GameOverScreen gameOverScreen;
 
     [SerializeField]
     HeartSystem heartSystem;
 
     public int hearts;
     public int maxHearts;
+
+    [SerializeField]
+    private int boomb;
 
     public BallHealth()
     {
@@ -25,13 +28,13 @@ public class BallHealth : MonoBehaviour
         instance = this;
     }
 
-    public void GameOver()
-    {
-        if(hearts == 0)
-        {
+    //public void GameOver()
+    //{
+    //    if(hearts == 0)
+    //    {
             
-        }
-    }
+    //    }
+    //}
 
     public void Start()
     {

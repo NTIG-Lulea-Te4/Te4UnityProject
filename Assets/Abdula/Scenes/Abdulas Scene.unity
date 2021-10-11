@@ -1557,10 +1557,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8dc012d73789b4b8ad7b1281c9f880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverScreen: {fileID: 0}
   heartSystem: {fileID: 37707327}
   hearts: 3
   maxHearts: 3
+  boomb: 0
 --- !u!114 &470508369
 MonoBehaviour:
   m_ObjectHideFlags: 0

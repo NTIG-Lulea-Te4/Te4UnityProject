@@ -13,9 +13,9 @@ public class DestroyOnCollision : MonoBehaviour
             //Debug.Log("Collided");
             ScoreManager.instance.AddPoint();
             Destroy(collision.gameObject);
-            FindObjectOfType<GameOverScreen>().Setup();
-            gameOver.SetActive(true);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //FindObjectOfType<GameOverScreen>().Setup();
+            //gameOver.SetActive(true);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
