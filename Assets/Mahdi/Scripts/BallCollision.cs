@@ -17,7 +17,7 @@ public class BallCollision : MonoBehaviour
             GameObject myExplosion = Instantiate(explosion, transform.position, transform.rotation);
             Destroy(myExplosion, delayTime);
             Destroy(collision.gameObject);
-            ScoreManager.instance.AddPoint();
+            ScoreManager.instance.AddScore();
             FindObjectOfType<CreareNewObjects>().CreateNewObject();
         }
     }

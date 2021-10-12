@@ -16,8 +16,8 @@ public class ShotCollision : MonoBehaviour
             GameObject myExplosion = Instantiate(explosion, transform.position, transform.rotation);
             Destroy(myExplosion, 2);
             Destroy(collision.gameObject);
-            DestroyImmediate(collision.gameObject);
             FindObjectOfType<GameManager>().GameOver();
+            //FindObjectOfType<ScoreManager>().Dead();
 
         }
     }

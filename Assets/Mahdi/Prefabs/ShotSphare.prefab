@@ -128,6 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObject: {fileID: 4476645158861532253, guid: d3373b678ead2f1498c08b37e260b474, type: 3}
   explosion: {fileID: 2397212705222338151, guid: 742e455319f61494ea818489eea6fe0c, type: 3}
+  restart: {fileID: 5576508208107490443, guid: 1a17edbbe3e634e4d9d8dc2c3a5c5c49, type: 3}
 --- !u!114 &5253618956626125468
 MonoBehaviour:
   m_ObjectHideFlags: 0

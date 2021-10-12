@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public Text gameOverText;
+    public GameObject restart;
+    int score;
+
     bool gameOver = false;
     float restartDelay = 1f;
     public void GameOver()
@@ -13,15 +16,16 @@ public class GameManager : MonoBehaviour
         if (gameOver == false)
         {
             gameOver = true;
-            Debug.Log("GameOver");
-            FindObjectOfType<GameOverScript>().SetUp(0);
-            Invoke("Restart", restartDelay);
+            Debug.Log("tre");
+            Invoke("Dead", restartDelay);
+
+           // Invoke("Restart", restartDelay);
 
         }
     }
-    void Restart()
+    public void Dead()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        restart.SetActive(true);
+        FindObjectOfType<RestartMenu>();
     }
-
 }

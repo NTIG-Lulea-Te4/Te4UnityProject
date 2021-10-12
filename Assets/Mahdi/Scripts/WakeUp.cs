@@ -8,8 +8,7 @@ public class WakeUp : MonoBehaviour
     public Rigidbody rigidbody;
     void Start()
     {
-        
-       
+
     }
 
     // Update is called once per frame
@@ -19,6 +18,7 @@ public class WakeUp : MonoBehaviour
         {
             rigidbody.WakeUp();
             Debug.Log("wakeup");
+
         }
     }
 }
